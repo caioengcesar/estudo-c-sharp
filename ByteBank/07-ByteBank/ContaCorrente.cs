@@ -1,10 +1,12 @@
 ﻿//using _05_ByteBank;
 
-namespace _06_ByteBank
+namespace _07_ByteBank
 {
     public class ContaCorrente
     {
         public Cliente Titular { get; set; }
+
+        public static int TotalDeContasCriadas { get; private set; }
 
         public int Agencia { get; set; }
         public int Numero { get; set; }
@@ -29,17 +31,12 @@ namespace _06_ByteBank
             }
         }
 
-        public void SetSaldo(double saldo)
+        public ContaCorrente(int agencia, int numero)
         {
-            if(saldo < 0)
-            {
-                return;
-            }
-            this._saldo = saldo;
-        }
-        public double GetSaldo()
-        {
-            return _saldo;
+            Agencia = agencia;
+            Numero = numero;
+
+            TotalDeContasCriadas++;
         }
 
         public bool Sacar(double valor)
