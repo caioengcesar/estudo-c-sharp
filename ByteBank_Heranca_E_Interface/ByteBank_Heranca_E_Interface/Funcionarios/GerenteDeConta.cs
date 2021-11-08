@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBank_Heranca_E_Interface.Sistemas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ByteBank_Heranca_E_Interface.Funcionarios
 {
-    class GerenteDeConta : Funcionario
+    class GerenteDeConta : FuncionarioAutenticavel
     {
         public GerenteDeConta(string cpf) : base(4000, cpf)
         {

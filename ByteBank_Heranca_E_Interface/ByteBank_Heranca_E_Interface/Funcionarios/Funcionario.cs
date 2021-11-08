@@ -21,17 +21,9 @@ namespace ByteBank_Heranca_E_Interface.Funcionarios
             Salario = salario;
         }
 
-        public virtual void AumentarSalario()
-        {
-            Salario *= 1.1;
-        }
+        public abstract void AumentarSalario();
 
-        public virtual double GetBonificacao()
-        {
-            //if (_tipo == 1)
-                //return Salario;
+        public abstract double GetBonificacao();
 
-            return Salario * 0.10;
-        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ByteBank_Heranca_E_Interface.Sistemas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace ByteBank_Heranca_E_Interface.Funcionarios
 {
-    public class Diretor: Funcionario
+    public class Diretor: FuncionarioAutenticavel
     {
+
         public Diretor(string cpf) : base(5000, cpf)
         {
             
         }
+
         public override double GetBonificacao()
         {
             return Salario * 0.5;
@@ -20,5 +23,6 @@ namespace ByteBank_Heranca_E_Interface.Funcionarios
         {
             Salario *= 1.15;
         }
+
     }
 }
