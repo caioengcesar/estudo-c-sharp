@@ -1,11 +1,11 @@
-﻿using ByteBank_Heranca_E_Interface.Funcionarios;
+﻿using ByteBank.Modelos.Funcionarios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank_Heranca_E_Interface
+namespace ByteBank.Modelos
 {
     public class GerenciadorBonificacao
     {
@@ -20,6 +20,5 @@ namespace ByteBank_Heranca_E_Interface
         {
             return _totalBonificacao;
         }
-        
     }
 }

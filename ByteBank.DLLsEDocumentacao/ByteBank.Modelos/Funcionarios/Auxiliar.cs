@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank_Heranca_E_Interface.Funcionarios
+namespace ByteBank.Modelos.Funcionarios
 {
-    class Auxiliar : Funcionario
+    public class Auxiliar : Funcionario
     {
         public Auxiliar(string cpf) : base(2000, cpf)
         {
+        }
 
-        }
-        public override double GetBonificacao()
-        {
-            return Salario * 0.2;
-        }
         public override void AumentarSalario()
         {
             Salario *= 1.1;
+        }
+
+        internal protected override double GetBonificacao()
+        {
+            return Salario * 0.2;
         }
     }
 }

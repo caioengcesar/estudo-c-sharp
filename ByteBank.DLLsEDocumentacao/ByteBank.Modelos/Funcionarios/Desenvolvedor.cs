@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank_Heranca_E_Interface.Funcionarios
+namespace ByteBank.Modelos.Funcionarios
 {
-    public class Desenvolvedor: Funcionario
+    public class Desenvolvedor : Funcionario
     {
-        public Desenvolvedor(string cpf): base(3000,cpf)
+        public Desenvolvedor(string cpf) : base(3000, cpf)
         {
-
         }
 
         public override void AumentarSalario()
@@ -18,7 +17,7 @@ namespace ByteBank_Heranca_E_Interface.Funcionarios
             Salario *= 0.15;
         }
 
-        public override double GetBonificacao()
+        internal protected override double GetBonificacao()
         {
             return Salario * 0.1;
         }

@@ -1,46 +1,46 @@
-﻿//using _05_ByteBank;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-using System;
-
-namespace _07_ByteBank
+namespace ByteBank.Modelos
 {
     public class ContaCorrente
     {
-        public Cliente Titular { get; set; }
-
-        public static double TaxaOperacao { get; private set; }
+        private static int TaxaOperacao;
 
         public static int TotalDeContasCriadas { get; private set; }
+
+        public Cliente Titular { get; set; }
 
         public int ContadorSaquesNaoPermitidos { get; private set; }
         public int ContadorTransferenciasNaoPermitidas { get; private set; }
 
-        public int Agencia { get; }
         public int Numero { get; }
-        
-        private double _saldo = 100;
+        public int Agencia { get; }
 
-        
+        private double _saldo = 100;
         public double Saldo
         {
             get
             {
                 return _saldo;
             }
-
             set
             {
                 if (value < 0)
                 {
                     return;
                 }
+
                 _saldo = value;
             }
         }
 
         public ContaCorrente(int agencia, int numero)
         {
-            if (agencia <= 0)
+            if (numero <= 0)
             {
                 throw new ArgumentException("O argumento agencia deve ser maior que 0.", nameof(agencia));
             }
@@ -61,13 +61,15 @@ namespace _07_ByteBank
         {
             if (valor < 0)
             {
-                throw new ArgumentException("Valor de saque não pode ser negativo", nameof(valor));
+                throw new ArgumentException("Valor inválido para o saque.", nameof(valor));
             }
+
             if (_saldo < valor)
             {
                 ContadorSaquesNaoPermitidos++;
                 throw new SaldoInsuficienteException(Saldo, valor);
             }
+
             _saldo -= valor;
         }
 
@@ -80,10 +82,9 @@ namespace _07_ByteBank
         {
             if (valor < 0)
             {
-                throw new ArgumentException("Valor inválido para a transferência", nameof(valor));
+                throw new ArgumentException("Valor inválido para a transferência.", nameof(valor));
             }
 
-            //Sacar(valor);
             try
             {
                 Sacar(valor);
@@ -95,7 +96,7 @@ namespace _07_ByteBank
             }
 
             contaDestino.Depositar(valor);
-
         }
     }
+
 }
