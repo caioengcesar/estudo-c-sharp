@@ -1,8 +1,12 @@
 ﻿//using _05_ByteBank;
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace _07_ByteBank
+namespace ByteBank
 {
     public class ContaCorrente
     {
@@ -17,10 +21,10 @@ namespace _07_ByteBank
 
         public int Agencia { get; }
         public int Numero { get; }
-        
+
         private double _saldo = 100;
 
-        
+
         public double Saldo
         {
             get

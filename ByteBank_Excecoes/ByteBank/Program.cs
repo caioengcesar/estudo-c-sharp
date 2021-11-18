@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _07_ByteBank
+namespace ByteBank
 {
     class Program
     {
@@ -168,7 +168,7 @@ namespace _07_ByteBank
         public static int Dividir(int numero, int divisor)
         {
             ContaCorrente conta = null;
-            //Console.WriteLine(conta.Saldo);
+            Console.WriteLine(conta.Saldo);
             try
             {
                 return numero / divisor;
