@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBank", "ByteBank\ByteBank.csproj", "{080F47B2-75A0-4E2C-8AF4-DAE0A9B217FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ByteBank.Excecoes", "ByteBank.Excecoes\ByteBank.Excecoes.csproj", "{5AAB5886-532B-4AF9-AA07-D133BFF018C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{080F47B2-75A0-4E2C-8AF4-DAE0A9B217FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{080F47B2-75A0-4E2C-8AF4-DAE0A9B217FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{080F47B2-75A0-4E2C-8AF4-DAE0A9B217FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{080F47B2-75A0-4E2C-8AF4-DAE0A9B217FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AAB5886-532B-4AF9-AA07-D133BFF018C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AAB5886-532B-4AF9-AA07-D133BFF018C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AAB5886-532B-4AF9-AA07-D133BFF018C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AAB5886-532B-4AF9-AA07-D133BFF018C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CB73CCF5-B972-4AEA-A898-3B3EB2E4BC43}
+		SolutionGuid = {F03C198E-FED6-4BC5-B712-9A9F384A376D}
 	EndGlobalSection
 EndGlobal

@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank
+namespace ByteBank.Excecoes
 {
     class Program
     {
@@ -173,7 +172,7 @@ namespace ByteBank
             {
                 return numero / divisor;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 Console.WriteLine("Exceção com número = " + numero + " e divisor = " + divisor);
                 throw;
@@ -182,7 +181,7 @@ namespace ByteBank
 
         public static void Metodo()
         {
-                TestaDivisao(0);
+            TestaDivisao(0);
         }
 
         public static void TestaDivisao(int divisor)

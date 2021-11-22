@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{080F47B2-75A0-4E2C-8AF4-DAE0A9B217FD}</ProjectGuid>
+    <ProjectGuid>{5AAB5886-532B-4AF9-AA07-D133BFF018C0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_07_ByteBank</RootNamespace>
-    <AssemblyName>07-ByteBank</AssemblyName>
+    <RootNamespace>ByteBank.Excecoes</RootNamespace>
+    <AssemblyName>ByteBank.Excecoes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,8 +46,6 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="ContaCorrente.cs" />
     <Compile Include="LeitorDeArquivos.cs" />
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
-    <Compile Include="obj\Release\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="OperacaoFinanceiraException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -55,14 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="bin\Debug\ByteBank.exe.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bin\Debug\ByteBank.exe" />
-    <Content Include="bin\Debug\ByteBank.pdb" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

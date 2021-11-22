@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ByteBank
+namespace ByteBank.Excecoes
 {
     public class LeitorDeArquivos : IDisposable
     {
@@ -24,9 +24,9 @@ namespace ByteBank
         {
             Console.WriteLine("Lendo linha. . .");
 
-            throw new IOException();
+            //throw new IOException();
 
-            //return "Linha do arquivo";
+            return "Linha do arquivo";
         }
 
         public void Dispose()
