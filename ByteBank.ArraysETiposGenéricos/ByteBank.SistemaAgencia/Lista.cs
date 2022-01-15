@@ -101,15 +101,6 @@ namespace ByteBank.SistemaAgencia
             }
         }
 
-        public void EscreverListaNaTela()
-        {
-            for (int i = 0; i < _proximaPosicao; i++)
-            {
-                T item = _itens[i];
-                Console.WriteLine($"Conta no índice {i}: {item}");
-            }
-        }
-
         public int Tamanho
         {
             get

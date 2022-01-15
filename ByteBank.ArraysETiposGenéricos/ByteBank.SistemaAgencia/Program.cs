@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
+using ByteBank.SistemaAgencia.Extensoes;
+using ByteBank.SistemaAgencia.Comparadores;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -116,25 +118,100 @@ namespace ByteBank.SistemaAgencia
 
             //-----------------------------------------------------------------------------
 
-            Lista<int> idades = new Lista<int>();
+            //Lista<int> idades = new Lista<int>();
 
-            idades.AdicionarVarios(63, 15, 21, 50);
-            idades.Remover(15);
+            //idades.AdicionarVarios(63, 15, 21, 50);
+            //idades.Remover(15);
 
-            for (int i = 0; i < idades.Tamanho; i++)
+            //for (int i = 0; i < idades.Tamanho; i++)
+            //{
+            //    Console.WriteLine(idades[i]);
+            //}
+
+            //Lista<string> cursos = new Lista<string>();
+            //cursos.AdicionarVarios("C# Parte 1", "C# Parte 2", "C# Parte 3");
+
+            //Lista<ContaCorrente> contas = new Lista<ContaCorrente>();
+            //contas.AdicionarVarios(
+            //    new ContaCorrente(124, 54354),
+            //    new ContaCorrente(201, 44354)
+            //);
+
+            //-----------------------------------------------------------------------------
+
+            //List<int> idades = new List<int>();
+            var idades = new List<int>();
+
+            idades.Add(1);
+            idades.Add(5);
+            idades.Add(14);
+            idades.Add(25);
+            idades.Add(38);
+            idades.Add(61);
+
+            idades.Remove(5);
+
+            //ListExtensoes.AdicionarVarios(idades, 45, 89, 12);
+            idades.AdicionarVarios(45, 89, 12);
+
+            idades.Sort();
+
+            //for (int i = 0; i < idades.Count; i++)
+            foreach (var idade in idades)
             {
-                int itemAtual = idades[i];
-                Console.WriteLine($"Valor no índice {i}: {itemAtual}");
+                Console.WriteLine(idade);
             }
 
-            Lista<string> cursos = new Lista<string>();
-            cursos.AdicionarVarios("C# Parte 1", "C# Parte 2", "C# Parte 3");
+            var nomes = new List<string>()
+            {
+                "Vinícius",
+                "Gisele",
+                "Mayra",
+                "Vasco"
+            };
 
-            Lista<ContaCorrente> contas = new Lista<ContaCorrente>();
-            contas.AdicionarVarios(
-                new ContaCorrente(124, 54354),
-                new ContaCorrente(201, 44354)
-            );
+            nomes.Sort();
+
+            foreach (var nome in nomes)
+            {
+                Console.WriteLine(nome);
+            }
+
+            var contas = new List<ContaCorrente>()
+            {
+                new ContaCorrente(341, 57480),
+                new ContaCorrente(342, 45678),
+                new ContaCorrente(340, 48950),
+                new ContaCorrente(290, 18950),
+                new ContaCorrente(180, 18940)
+            };
+
+            //contas.Sort();
+
+            //contas.Sort(new ComparadorContaCorrentePorAgencia());
+
+            //contas.OrderBy(conta => conta.Numero);
+
+            //var contasordenadas = contas.orderby(conta =>
+            //    {
+            //        if (conta == null)
+            //        {
+            //            return int.maxvalue;
+            //        }
+            //        return conta.numero;
+            //    });
+
+            var contasOrdenadas = contas
+                .Where(conta => conta != null)
+                .OrderBy(conta => conta.Numero);
+
+            foreach (var conta in contasOrdenadas)
+            {
+                if (conta != null)
+                {
+                    Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
+                } 
+            }
 
             Console.ReadLine();
         }
